@@ -1,4 +1,0 @@
-{
-  "mongoURI": "mongodb+srv://dev:2k4knaruto@cluster0.uwtf8.mongodb.net/forumapp?retryWrites=true&w=majority",
-  "jwtSecret": "secret"
-}

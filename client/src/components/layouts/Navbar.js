@@ -2,18 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
+
+
     return (
 
         <>
             <div class="vertical-nav bg-white" id="sidebar">
+                
+
                 <div class="py-4 px-3 mb-4 bg-light">
                     <div class="media d-flex align-items-center">
                         <div class="media-body">
-                            <h4 class="m-0">John Doe</h4>
+                            <h4 class="m-0">Manuella Tarly </h4>
+                            <p class="font-weight-light text-muted mb-0">Level: beginner</p>
                         </div>
                     </div>
                 </div>
-
                 <ul class="nav flex-column bg-white mb-0">
                     <li class="nav-item">
                         <Link to="/profile" class="nav-link text-dark font-italic">
@@ -28,13 +32,7 @@ function Navbar() {
                     </Link>
                     </li>
                     <li class="nav-item">
-                        <Link to="/error" class="nav-link text-dark font-italic">
-                            <i class="fas fa-bell mr-3 text-primary fa-fw"></i>
-                        Notifications
-                    </Link>
-                    </li>
-                    <li class="nav-item">
-                        <Link to="/error" class="nav-link text-dark font-italic">
+                        <Link to="/search" class="nav-link text-dark font-italic">
                             <i class="fas fa-search mr-3 text-primary fa-fw"></i>
                         Search
                     </Link>
@@ -56,5 +54,6 @@ function Navbar() {
         </>
     )
 }
+
 
 export default Navbar;

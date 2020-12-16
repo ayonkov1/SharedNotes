@@ -1,49 +1,42 @@
 import React from 'react'
+import logo from '../imgs/logo.png'
 
 function Footer() {
+     const styleLogo = {
+       width: "80px",
+       height: "60px",
+    }
     return (
 
         <footer class="bg-white">
-            <div class="container py-5">
+            <div class="page-content p-5">
                 <div class="row py-4">
                     <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                        <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                    eiusmod tempor incididunt.</p>
-                        <ul class="list-inline mt-4">
-                            <li class="list-inline-item"><a href="#" target="_blank" title="twitter"><i
-                                class="fa fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="#" target="_blank" title="facebook"><i
-                                class="fa fa-facebook"></i></a></li>
-                            <li class="list-inline-item"><a href="#" target="_blank" title="instagram"><i
-                                class="fa fa-instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="#" target="_blank" title="pinterest"><i
-                                class="fa fa-pinterest"></i></a></li>
-                            <li class="list-inline-item"><a href="#" target="_blank" title="vimeo"><i
-                                class="fa fa-vimeo"></i></a></li>
-                        </ul>
+                        <p class="font-italic text-muted">Shared Notes is a platform where you can ask questions and help others. Made by students for students.</p>
+                        <img style ={styleLogo} src={logo} alt="Logo" />Millenium Creative
+                
                     </div>
                     <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-                        <h6 class="text-uppercase font-weight-bold mb-4">Shop</h6>
+                        <h6 class="text-uppercase font-weight-bold mb-4">About us</h6>
                         <ul class="list-unstyled mb-0">
-                            <li class="mb-2"><a href="#" class="text-muted">For Women</a></li>
-                            <li class="mb-2"><a href="#" class="text-muted">For Men</a></li>
-                            <li class="mb-2"><a href="#" class="text-muted">Stores</a></li>
+                            <li class="mb-2"><a href="#" class="text-muted">Team</a></li>
+                            <li class="mb-2"><a href="#" class="text-muted">Contact us</a></li>
+                            <li class="mb-2"><a href="#" class="text-muted">Millenium creative</a></li>
                             <li class="mb-2"><a href="#" class="text-muted">Our Blog</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-                        <h6 class="text-uppercase font-weight-bold mb-4">Company</h6>
+                        <h6 class="text-uppercase font-weight-bold mb-4">Navigation</h6>
                         <ul class="list-unstyled mb-0">
-                            <li class="mb-2"><a href="#" class="text-muted">Login</a></li>
-                            <li class="mb-2"><a href="#" class="text-muted">Register</a></li>
-                            <li class="mb-2"><a href="#" class="text-muted">Wishlist</a></li>
-                            <li class="mb-2"><a href="#" class="text-muted">Our Products</a></li>
+                            <li class="mb-2"><a href="#" class="text-muted">Logout</a></li>
+                            <li class="mb-2"><a href="#" class="text-muted">My profile</a></li>
+                            <li class="mb-2"><a href="#" class="text-muted">Home</a></li>
+                            <li class="mb-2"><a href="#" class="text-muted">My activity</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-4 col-md-6 mb-lg-0">
                         <h6 class="text-uppercase font-weight-bold mb-4">Newsletter</h6>
-                        <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque
-                    temporibus.</p>
+                        <p class="text-muted mb-4">Subscribe to our newsletter for our latest updates.</p>
                         <div class="p-1 rounded border">
                             <div class="input-group">
                                 <div class="input-group-append">
@@ -57,7 +50,7 @@ function Footer() {
             </div>
             <div class="bg-light py-4">
                 <div class="container text-center">
-                    <p class="text-muted mb-0 py-2">© 2019 Bootstrapious All rights reserved.</p>
+                    <p class="text-muted mb-0 py-2">© 2020 Millenium Creative All rights reserved.</p>
                 </div>
             </div>
         </footer>

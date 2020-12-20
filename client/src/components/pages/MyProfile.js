@@ -1,15 +1,20 @@
 import React, { Component } from 'react'
 import Popup from 'reactjs-popup';
+import {connect} from "react-redux";
+import {LogOut} from "../../actions/UserAction";
+import {useHistory} from "react-router-dom";
+import Navbar from '../layouts/Navbar';
+import Footer from '../layouts/Footer';
 
-
-class MyProfile extends Component { 
-
-    render() {
-        return (
-            <div>
+const MyProfile = ({LogOut}) => {
+    let history = useHistory();
+    return (
+        <>
+        <Navbar /> 
+             <div>
 
                 <div class="page-content p-5" id="content">
-                    
+                
                         <div class="px-4 pt-0 pb-4 pt-4 mb-4 bg-dark profile-header-opacity rounded">
                             <div class="media align-items-end profile-header">
                                 <div class="profile mr-3"><img src={"https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-4.jpg"} alt="..." width="130" class="rounded-circle mb-2 img-thumbnail" /></div>
@@ -150,10 +155,22 @@ class MyProfile extends Component {
                             </div>
                         </div>
                     </div>
+                    <button type="button" class="form-submit" onClick={()=>{
+                 LogOut();
+                 history.push("/")
+                }}> Log out</button>
+                    
                 </div>
             </div>
+
+        
+        <Footer />
+        </>
         )
-    }
+
+
+
+    
 }
 
-export default MyProfile;
+export default connect(null,{LogOut})(MyProfile);

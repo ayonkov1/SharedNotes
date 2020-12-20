@@ -1,13 +1,21 @@
 import React, { Component } from 'react'
+import {connect} from "react-redux";
+import {LogOut} from "../../actions/UserAction";
+import {useHistory} from "react-router-dom";
+import Navbar from '../layouts/Navbar';
+import Footer from '../layouts/Footer';
 
-class Bookmarks extends Component {
-    render() {
-        return (
-            <div>
+
+const Bookmarks = ({LogOut}) => {
+    let history = useHistory();
+    return (
+        <>
+        <Navbar /> 
+             <div>
 
                 <div class="page-content p-5" id="content">
 
-        
+                    
 
                     <h2 class="display-4 text-white">Bookmarks</h2>
                     <p class="lead text-white mb-0">Browse through all of your saved questions.</p>
@@ -101,12 +109,21 @@ class Bookmarks extends Component {
                             </div>
                         </div>
                     </div>
-
+ 
+                  <button type="button" class="form-submit" onClick={()=>{
+                 LogOut();
+                 history.push("/")
+                }}> Log out</button>
+                
                 </div>
 
             </div>
+        <Footer />
+        </>
         )
-    }
-}
 
-export default Bookmarks;
+
+
+    
+}
+export default connect(null,{LogOut})(Bookmarks);

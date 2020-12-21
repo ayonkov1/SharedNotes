@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', (req, res) => console.log('Server is running'));
 
-// Routes
+// Add the Routes
 app.use('/api/user', require('./routes/user'));
 
 const PORT = process.env.PORT || 5000;

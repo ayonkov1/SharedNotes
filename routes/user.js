@@ -40,7 +40,7 @@ router.post(
       user = new User({
         name,
         email,
-        password
+        password,
       });
 
       const payload = {
@@ -70,16 +70,14 @@ router.post(
   }
 );
 
-
-
 //@route    POST api/auth
 //@desc     LogIn customer & Get token
 //@access   Public
 router.post(
-  "/login",
+  '/login',
   [
-    check("email", "Please include a valid email").isEmail(),
-    check("password", "Password is required").exists(),
+    check('email', 'Please include a valid email').isEmail(),
+    check('password', 'Password is required').exists(),
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -89,20 +87,24 @@ router.post(
 
     const { email, password } = req.body;
     try {
-      console.log("email=" + email);
-      console.log("password=" + password);
+      console.log('email=' + email);
+      console.log('password=' + password);
       let user = await User.findOne({ email });
 
       console.log(user);
 
       if (!user) {
-        return res.status(400).json({ errors:[{msg: "Invalid Credentials"}] });
+        return res
+          .status(400)
+          .json({ errors: [{ msg: 'Invalid Credentials' }] });
       }
 
       const isMatch = await bcrypt.compare(password, user.password);
 
       if (!isMatch) {
-        return res.status(400).json({ errors:[{msg: "Invalid Credentials"}] });
+        return res
+          .status(400)
+          .json({ errors: [{ msg: 'Invalid Credentials' }] });
       }
       // const type=req.type;
       const payload = {
@@ -113,7 +115,7 @@ router.post(
 
       jwt.sign(
         payload,
-        config.get("jwtSecret"),
+        config.get('jwtSecret'),
         {
           expiresIn: 360000,
         },
@@ -124,7 +126,7 @@ router.post(
       );
     } catch (err) {
       console.log(err);
-      res.status(500).send("Server error");
+      res.status(500).send('Server error');
     }
   }
 );

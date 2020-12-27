@@ -44,3 +44,9 @@ body {
 [data-popup='tooltip'].popup-overlay {
   background: transparent;
 }
+.TitleError{
+  color: red;
+}
+.Likes{
+ font-size: 13px; 
+}

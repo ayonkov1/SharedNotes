@@ -1,19 +1,17 @@
-import { SET_USER } from '../actions/types';
+import { SET_QUESTION } from '../actions/types';
 
 const initialState = {
-  SignUp_Name: '',
-  SignUp_Email: '',
-  SignUp_Pass: '',
-  SignUp_ConfirmPass: '',
-  IsSignIn: false,
-  SignIn_Email: '',
-  SignIn_Pass: '',
-  LoggedInUser: {},
+  title: '',
+  description: '',
+  UserQuestions: [],
+  Questions: [],
+  TotalLikes: 0,
+  TotalQuestions: 0,
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case SET_USER: {
+    case SET_QUESTION: {
       return {
         ...state,
         [action.payload.name]: action.payload.value,

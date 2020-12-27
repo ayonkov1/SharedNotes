@@ -18,6 +18,7 @@ app.get('/', (req, res) => console.log('Server is running'));
 
 // Routes
 app.use('/api/user', require('./routes/user'));
+app.use('/api/question', require('./routes/question'));
 
 const PORT = process.env.PORT || 5000;
 

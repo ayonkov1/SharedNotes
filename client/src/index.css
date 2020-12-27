@@ -415,9 +415,18 @@ label {
   -o-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   color: #222; }
+  .form-label{
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    
+  }
 
 .label-has-error {
   top: 22%; }
+  .require{
+    color: red;
+  }
 
 label.error {
   position: relative;

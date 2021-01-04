@@ -5,8 +5,9 @@
 //     });
 // });
 function navbarCollapse() {
-  let toggle = document.querySelector('#sidebarCollapse');
-  toggle.classList.add('active');
+    let toggle = document.querySelector('#sidebarCollapse');
+    toggle.classList.add('active');
 }
+
 
 export default navbarCollapse;

@@ -4,21 +4,22 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
+    "build": "cd client/ && npm install && npm run build",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "cacheDirectories": [
+    "node_modules",
+    "client/node_modules"
+  ],
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KhawajaAli246/react-express-starter.git"
+    "type": "git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KhawajaAli246/react-express-starter/issues"
-  },
-  "homepage": "https://github.com/KhawajaAli246/react-express-starter#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",

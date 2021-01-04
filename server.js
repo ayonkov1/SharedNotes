@@ -3,9 +3,13 @@ const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const connectDB = require('./config/db');
+const path = require('path');
 
 //Connect Database
 connectDB();
+
+// Priority serve any static files.
+app.use(express.static(path.resolve(__dirname, './client/build')));
 
 //Init Middleware
 app.use(express.json({ extended: false }));
